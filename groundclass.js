@@ -7,10 +7,10 @@ class Ground{
 
     this.x=x;
     this.y=y;
-    this.width=1000;
+    this.width=1600;
     this.height=15;
 
-    this.body=Bodies.rectangle(x,y,1000,10,options);
+    this.body=Bodies.rectangle(x,y,1600,10,options);
     World.add(world,this.body);
 
    }
@@ -21,8 +21,8 @@ class Ground{
      
     push()
     rectMode(CENTER);
-    fill("black");
-    rect(pos.x,pos.y,this.width,this.height);
+    fill(255,255,255);
+    rect(pos.x,pos.y,1600,15);
     pop()
    }
 }

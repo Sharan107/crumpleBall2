@@ -16,27 +16,19 @@ function setup() {
 	engine = Engine.create();
 	world = engine.world;
 
-	ground= new Ground(750,1500);
+	ground= new Ground(800,550);
 
-	crumpleBall= new Paper(200,417,50);
+	crumpleBall= new Paper(300,417,35);
 
-	dustbinBase= new Dustbin(700,434,230,15);
-	dustbinWall= new Dustbin(580,385,15,100);
-	dustbinWall2= new Dustbin(815,385,15,100);
-
-	dustbinObj=createSprite(700,434);
+	dustbinObj=createSprite(1200,460);
 	dustbinObj.addImage(dustbinImg);
+	dustbinObj.scale=0.5;
 
-	var render = new Render.create ({
-	element: document.body,
-	engine: engine,
-	options: {
-	width:1600,
-	height:700,
-	wireframes: false 
-	}
-	});
-	
+	dustbinBase= new Dustbin(1200,535,110,15);
+	dustbinWall= new Dustbin(1145,455,15,150);
+	dustbinWall2= new Dustbin(1255,455,15,150);
+
+
 	Engine.run(engine);
 
 }
@@ -51,9 +43,7 @@ dustbinBase.display();
 dustbinWall.display();
 dustbinWall2.display();
 
-keyPressed();
-
-  drawSprites();
+drawSprites();
 
 }
 
@@ -61,6 +51,6 @@ function keyPressed() {
 	//write code here
 	
    if(keyCode===UP_ARROW){
-	 Body.applyForce(crumpleBall.body,crumpleBall.body.position,{x:11,y:-10});
+	 Body.applyForce(crumpleBall.body,crumpleBall.body.position,{x:64,y:-65});
    }
 }

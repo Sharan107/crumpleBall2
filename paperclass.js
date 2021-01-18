@@ -28,7 +28,7 @@ translate(paperpos.x,paperpos.y);
 imageMode(CENTER);
 strokeWeight(3);
 fill(255,0,255);
- image(0,0,this.r,this.r);
+ image(this.image,0,0,this.r,this.r);
  pop()
 }
 }
